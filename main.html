@@ -1,16 +1,132 @@
+
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Adoption Application</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7f6;
+            margin: 0;
+            padding: 30px 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        form {
+            background: white;
+            width: 100%;
+            max-width: 450px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #344e41;
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #588157;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 22px;
+        }
+
+        .checkbox-container label {
+            margin: 0;
+            font-weight: normal;
+        }
+
+        input[type="checkbox"] {
+            width: 17px;
+            height: 17px;
+            accent-color: #588157;
+        }
+
+        select[multiple] {
+            min-height: 120px;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            background: #588157;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #3a5a40;
+        }
+    </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+    <form action="#" method="post">
+        <h1>Dog Adoption Application</h1>
 
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Name" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" name="phone" placeholder="Phone Number" required>
+
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address" placeholder="Address" required>
+
+        <div class="checkbox-container">
+            <input type="checkbox" id="checkbox" name="checkbox" value="Have you ever lived with a Dog before?">
+            <label for="checkbox">Have you ever lived with a Dog before?</label>
+        </div>
+
+        <label for="multiSelect">Please select your preferred breeds</label>
+        <select id="multiSelect" name="multiSelect" multiple required>
+            <option value="Labrador">Labrador</option>
+            <option value="Golden Retriever">Golden Retriever</option>
+            <option value="German Shepherd">German Shepherd</option>
+            <option value="Beagle">Beagle</option>
+            <option value="Poodle">Poodle</option>
+        </select>
+
+        <input type="submit" id="submit" value="Submit">
+    </form>
 </body>
-
 </html>
